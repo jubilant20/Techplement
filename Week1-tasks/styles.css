@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
-    --primary-color : #0F1035;
-    --secondary-color : #365486;
-    --light : #7FC7D9;
-    --extra-light : #e7f3f2;
+    --primary-color : #11212D;
+    --secondary-color : #253745;
+    --light : #4A5C6A;
+    --extra-light : #9BA8AB;
+    --super-extra-light : #CCD0CF;
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
@@ -14,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    border: none;
     text-decoration: none;
     text-transform: capitalize;
     transition: all .2s linear;
@@ -26,20 +28,173 @@ html {
     scroll-behavior: smooth;
 }
 
+.btn{
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--super-extra-light);  
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: max-content;
+    border: .2rem solid var(--extra-light);
+    background: var(--light);
+    padding: 1.2rem 4.5rem;
+    overflow: hidden; 
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%; height: 200%;
+    border-radius: 50%; 
+    background-color: var(--secondary-color);
+    transition: 500ms ease;
+    z-index: -1;
+
+}
+
+.btn .text{
+    transition: 250ms ease;
+}
+
+.btn .text-2{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); 
+    color: var(--light);
+}
+
+.btn:is(:hover, :focus-visible)::before{
+    bottom: -50%;
+  }
+
+.btn:is(:hover, :focus-visible) .text-1{
+    transform: translateY(-4rem);
+  }
+
+  .btn:is(:hover, :focus-visible) .text-2{
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
 /* Header */
 
 .header{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    right: 0; 
     z-index: 1000;
-    background: var(--extra-light);
+    background: var(--primary-color);
     box-shadow: var(--box-shadow);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 9%;
-
+    height: 17vh; 
 }
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--super-extra-light);
+}
+
+.header .logo i{
+    color: var(--super-extra-light);
+    padding-right: .7rem;
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    color: var(--super-extra-light);
+    margin: 0 1rem;
+    padding-block: 1rem;
+}
+.header .navbar a:hover{
+    position: relative;
+    max-width: max-content;
+    color: var(--light);
+}
+.header .navbar .hover-underline::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .5rem; 
+    border-bottom: .1rem solid var(--light);
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    color: var(--super-extra-light);
+    cursor: pointer;
+}
+.header.icons div:hover{
+    color: var(--light);
+}
+#menu-btn{
+    display: none;
+}
+ /* form */
+ .header .login-form{
+    position: absolute;
+    top: 115%;
+    right: 105%;  
+    background: var(--primary-color);
+    box-shadow: 1rem;
+    width: 35rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+ }
+ 
+ .header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+ }
+
+ .header .login-form h3{
+    font-size: 2.2rem;
+    color: var(--super-extra-light);
+    text-align: center;
+    margin-bottom: .7rem;
+ }
+
+ .header .login-form .box{
+    font-size: 1.5rem;
+    margin: .7rem 0;
+    border: .2rem solid rgb(55, 52, 63);
+    padding: 1rem 1.2rem;
+    color: var(--primary-color);
+    text-transform: none;
+    width: 100%;
+ }
+
+ .header .login-form .remember{
+    display: flex;
+    justify-content: left;
+    gap: .5rem;
+    margin: .7rem 0;
+ }
+
+ .header .login-form .remember label{
+    font-size: 1.5rem;
+    color: var(--super-extra-light);
+    cursor: pointer;
+ }
+
+ 
+/* Header Ends */
+
+
 

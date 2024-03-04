@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- custom css link -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script src="script.js"></script>
     <!-- Header Section Start -->
+
     <header class="header">
         <a href="#" class="logo"><i class="fas fa-book"></i>LearnWise</a>
 
@@ -20,13 +25,29 @@
             <a href="#review" class="hover-underline">Review</a>
             <a href="teacher" class="hover-underline">Teacher</a>
             <a href="#contact" class="hover-underline">Contact</a>
-        </nav>
+        </nav> 
 
         <div class="icons">
             <div id="login-btn" class="fas fa-user"></div>
             <div id="menu-btn" class="fas fa-bars"></div>
         </div>
-    </header>
+    
+    <!-- Login form -->
+    <form action="" class="login-form">
+        <h3>login-form</h3>
+        <input type="email" placeholder="Enter your email" class="box">
+        <input type="password" placeholder="Enter your password" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember">
+            <label for="remember-me">Remember-me</label>
+        </div>
+        <a href="#" class="btn">
+            <span class="text text-1">login now</span>
+            <span class="text text-2" aria-hidden="true">login now</span>
+        </a>
+    </form>
+    <!-- form ends here -->
+</header>
     <!-- Header Section End -->
 </body>
 </html>
