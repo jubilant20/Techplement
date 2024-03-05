@@ -43,14 +43,6 @@ section{
   margin-bottom: 3rem;
 }
 
-/* .heading::after{
-  content: url('assets/seperator.png');
-  display: block;
-  width: 8rem;
-  margin-inline: auto;
-  margin-top: -1rem; 
-} */
-
 .btn{
   position: relative;
   display: inline-block;
@@ -128,7 +120,9 @@ section{
 
 .header{
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0; 
+  left: 0; 
+  right: 0;
   z-index: 1000;
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
@@ -554,7 +548,7 @@ section{
   text-align: center;
   padding-bottom: .5rem;
   line-height: 1.8;
-  color: #444;
+  color: var(--secondary-color);
 }
 
 .review .slide .wrapper{
@@ -722,7 +716,7 @@ section{
 }
 
 .footer .box-container .box .link:hover{
-  color: var(--extra-lightr);
+  color: var(--light);
   text-decoration: underline;
 }
 
